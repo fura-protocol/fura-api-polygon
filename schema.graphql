@@ -1,0 +1,2034 @@
+directive @entity on OBJECT
+
+directive @derivedFrom(field: String) on FIELD_DEFINITION
+
+directive @subgraphId(id: String) on OBJECT
+
+scalar BigDecimal
+
+scalar BigInt
+
+input Block_height {
+  hash: Bytes
+  number: Int
+}
+
+scalar Bytes
+
+type Checkpoint {
+  id: ID!
+  proposer: Bytes!
+  headerBlockId: BigInt!
+  checkpointNumber: BigInt!
+  reward: BigInt!
+  start: BigInt!
+  end: BigInt!
+  root: Bytes!
+  transactionHash: Bytes!
+  timestamp: BigInt!
+}
+
+input Checkpoint_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  proposer: Bytes
+  proposer_not: Bytes
+  proposer_in: [Bytes!]
+  proposer_not_in: [Bytes!]
+  proposer_contains: Bytes
+  proposer_not_contains: Bytes
+  headerBlockId: BigInt
+  headerBlockId_not: BigInt
+  headerBlockId_gt: BigInt
+  headerBlockId_lt: BigInt
+  headerBlockId_gte: BigInt
+  headerBlockId_lte: BigInt
+  headerBlockId_in: [BigInt!]
+  headerBlockId_not_in: [BigInt!]
+  checkpointNumber: BigInt
+  checkpointNumber_not: BigInt
+  checkpointNumber_gt: BigInt
+  checkpointNumber_lt: BigInt
+  checkpointNumber_gte: BigInt
+  checkpointNumber_lte: BigInt
+  checkpointNumber_in: [BigInt!]
+  checkpointNumber_not_in: [BigInt!]
+  reward: BigInt
+  reward_not: BigInt
+  reward_gt: BigInt
+  reward_lt: BigInt
+  reward_gte: BigInt
+  reward_lte: BigInt
+  reward_in: [BigInt!]
+  reward_not_in: [BigInt!]
+  start: BigInt
+  start_not: BigInt
+  start_gt: BigInt
+  start_lt: BigInt
+  start_gte: BigInt
+  start_lte: BigInt
+  start_in: [BigInt!]
+  start_not_in: [BigInt!]
+  end: BigInt
+  end_not: BigInt
+  end_gt: BigInt
+  end_lt: BigInt
+  end_gte: BigInt
+  end_lte: BigInt
+  end_in: [BigInt!]
+  end_not_in: [BigInt!]
+  root: Bytes
+  root_not: Bytes
+  root_in: [Bytes!]
+  root_not_in: [Bytes!]
+  root_contains: Bytes
+  root_not_contains: Bytes
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+}
+
+enum Checkpoint_orderBy {
+  id
+  proposer
+  headerBlockId
+  checkpointNumber
+  reward
+  start
+  end
+  root
+  transactionHash
+  timestamp
+}
+
+type Delegator {
+  id: ID!
+  counter: BigInt!
+  validatorId: BigInt!
+  address: Bytes!
+  delegatedAmount: BigInt!
+  unclaimedAmount: BigInt!
+  claimedAmount: BigInt!
+  tokens: BigInt!
+  claimedRewards: BigInt!
+}
+
+type DelegatorUnbond {
+  id: ID!
+  nonce: BigInt!
+  validatorId: BigInt!
+  user: Bytes!
+  amount: BigInt!
+  tokens: BigInt!
+  completed: Boolean!
+  unbondStartedTxHash: Bytes
+  unbondStartedTimeStamp: BigInt
+  unbondClaimedTxHash: Bytes
+  unbondClaimedTimeStamp: BigInt
+}
+
+input DelegatorUnbond_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  nonce: BigInt
+  nonce_not: BigInt
+  nonce_gt: BigInt
+  nonce_lt: BigInt
+  nonce_gte: BigInt
+  nonce_lte: BigInt
+  nonce_in: [BigInt!]
+  nonce_not_in: [BigInt!]
+  validatorId: BigInt
+  validatorId_not: BigInt
+  validatorId_gt: BigInt
+  validatorId_lt: BigInt
+  validatorId_gte: BigInt
+  validatorId_lte: BigInt
+  validatorId_in: [BigInt!]
+  validatorId_not_in: [BigInt!]
+  user: Bytes
+  user_not: Bytes
+  user_in: [Bytes!]
+  user_not_in: [Bytes!]
+  user_contains: Bytes
+  user_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  tokens: BigInt
+  tokens_not: BigInt
+  tokens_gt: BigInt
+  tokens_lt: BigInt
+  tokens_gte: BigInt
+  tokens_lte: BigInt
+  tokens_in: [BigInt!]
+  tokens_not_in: [BigInt!]
+  completed: Boolean
+  completed_not: Boolean
+  completed_in: [Boolean!]
+  completed_not_in: [Boolean!]
+  unbondStartedTxHash: Bytes
+  unbondStartedTxHash_not: Bytes
+  unbondStartedTxHash_in: [Bytes!]
+  unbondStartedTxHash_not_in: [Bytes!]
+  unbondStartedTxHash_contains: Bytes
+  unbondStartedTxHash_not_contains: Bytes
+  unbondStartedTimeStamp: BigInt
+  unbondStartedTimeStamp_not: BigInt
+  unbondStartedTimeStamp_gt: BigInt
+  unbondStartedTimeStamp_lt: BigInt
+  unbondStartedTimeStamp_gte: BigInt
+  unbondStartedTimeStamp_lte: BigInt
+  unbondStartedTimeStamp_in: [BigInt!]
+  unbondStartedTimeStamp_not_in: [BigInt!]
+  unbondClaimedTxHash: Bytes
+  unbondClaimedTxHash_not: Bytes
+  unbondClaimedTxHash_in: [Bytes!]
+  unbondClaimedTxHash_not_in: [Bytes!]
+  unbondClaimedTxHash_contains: Bytes
+  unbondClaimedTxHash_not_contains: Bytes
+  unbondClaimedTimeStamp: BigInt
+  unbondClaimedTimeStamp_not: BigInt
+  unbondClaimedTimeStamp_gt: BigInt
+  unbondClaimedTimeStamp_lt: BigInt
+  unbondClaimedTimeStamp_gte: BigInt
+  unbondClaimedTimeStamp_lte: BigInt
+  unbondClaimedTimeStamp_in: [BigInt!]
+  unbondClaimedTimeStamp_not_in: [BigInt!]
+}
+
+enum DelegatorUnbond_orderBy {
+  id
+  nonce
+  validatorId
+  user
+  amount
+  tokens
+  completed
+  unbondStartedTxHash
+  unbondStartedTimeStamp
+  unbondClaimedTxHash
+  unbondClaimedTimeStamp
+}
+
+input Delegator_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  validatorId: BigInt
+  validatorId_not: BigInt
+  validatorId_gt: BigInt
+  validatorId_lt: BigInt
+  validatorId_gte: BigInt
+  validatorId_lte: BigInt
+  validatorId_in: [BigInt!]
+  validatorId_not_in: [BigInt!]
+  address: Bytes
+  address_not: Bytes
+  address_in: [Bytes!]
+  address_not_in: [Bytes!]
+  address_contains: Bytes
+  address_not_contains: Bytes
+  delegatedAmount: BigInt
+  delegatedAmount_not: BigInt
+  delegatedAmount_gt: BigInt
+  delegatedAmount_lt: BigInt
+  delegatedAmount_gte: BigInt
+  delegatedAmount_lte: BigInt
+  delegatedAmount_in: [BigInt!]
+  delegatedAmount_not_in: [BigInt!]
+  unclaimedAmount: BigInt
+  unclaimedAmount_not: BigInt
+  unclaimedAmount_gt: BigInt
+  unclaimedAmount_lt: BigInt
+  unclaimedAmount_gte: BigInt
+  unclaimedAmount_lte: BigInt
+  unclaimedAmount_in: [BigInt!]
+  unclaimedAmount_not_in: [BigInt!]
+  claimedAmount: BigInt
+  claimedAmount_not: BigInt
+  claimedAmount_gt: BigInt
+  claimedAmount_lt: BigInt
+  claimedAmount_gte: BigInt
+  claimedAmount_lte: BigInt
+  claimedAmount_in: [BigInt!]
+  claimedAmount_not_in: [BigInt!]
+  tokens: BigInt
+  tokens_not: BigInt
+  tokens_gt: BigInt
+  tokens_lt: BigInt
+  tokens_gte: BigInt
+  tokens_lte: BigInt
+  tokens_in: [BigInt!]
+  tokens_not_in: [BigInt!]
+  claimedRewards: BigInt
+  claimedRewards_not: BigInt
+  claimedRewards_gt: BigInt
+  claimedRewards_lt: BigInt
+  claimedRewards_gte: BigInt
+  claimedRewards_lte: BigInt
+  claimedRewards_in: [BigInt!]
+  claimedRewards_not_in: [BigInt!]
+}
+
+enum Delegator_orderBy {
+  id
+  counter
+  validatorId
+  address
+  delegatedAmount
+  unclaimedAmount
+  claimedAmount
+  tokens
+  claimedRewards
+}
+
+type FxDeposit {
+  id: ID!
+  counter: BigInt!
+  contractAddress: Bytes!
+  rootToken: Bytes!
+  tokenType: String!
+  depositor: Bytes!
+  userAddress: Bytes!
+  amount: BigInt
+  tokenId: BigInt
+  timestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type FxDepositCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input FxDepositCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum FxDepositCounter_orderBy {
+  id
+  current
+}
+
+input FxDeposit_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  contractAddress: Bytes
+  contractAddress_not: Bytes
+  contractAddress_in: [Bytes!]
+  contractAddress_not_in: [Bytes!]
+  contractAddress_contains: Bytes
+  contractAddress_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  tokenType: String
+  tokenType_not: String
+  tokenType_gt: String
+  tokenType_lt: String
+  tokenType_gte: String
+  tokenType_lte: String
+  tokenType_in: [String!]
+  tokenType_not_in: [String!]
+  tokenType_contains: String
+  tokenType_not_contains: String
+  tokenType_starts_with: String
+  tokenType_not_starts_with: String
+  tokenType_ends_with: String
+  tokenType_not_ends_with: String
+  depositor: Bytes
+  depositor_not: Bytes
+  depositor_in: [Bytes!]
+  depositor_not_in: [Bytes!]
+  depositor_contains: Bytes
+  depositor_not_contains: Bytes
+  userAddress: Bytes
+  userAddress_not: Bytes
+  userAddress_in: [Bytes!]
+  userAddress_not_in: [Bytes!]
+  userAddress_contains: Bytes
+  userAddress_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  tokenId: BigInt
+  tokenId_not: BigInt
+  tokenId_gt: BigInt
+  tokenId_lt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+}
+
+enum FxDeposit_orderBy {
+  id
+  counter
+  contractAddress
+  rootToken
+  tokenType
+  depositor
+  userAddress
+  amount
+  tokenId
+  timestamp
+  transactionHash
+}
+
+type FxTokenMapping {
+  id: ID!
+  counter: BigInt!
+  contractAddress: Bytes!
+  rootToken: Bytes!
+  childToken: Bytes!
+  tokenType: String!
+  timestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type FxTokenMappingCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input FxTokenMappingCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum FxTokenMappingCounter_orderBy {
+  id
+  current
+}
+
+input FxTokenMapping_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  contractAddress: Bytes
+  contractAddress_not: Bytes
+  contractAddress_in: [Bytes!]
+  contractAddress_not_in: [Bytes!]
+  contractAddress_contains: Bytes
+  contractAddress_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  childToken: Bytes
+  childToken_not: Bytes
+  childToken_in: [Bytes!]
+  childToken_not_in: [Bytes!]
+  childToken_contains: Bytes
+  childToken_not_contains: Bytes
+  tokenType: String
+  tokenType_not: String
+  tokenType_gt: String
+  tokenType_lt: String
+  tokenType_gte: String
+  tokenType_lte: String
+  tokenType_in: [String!]
+  tokenType_not_in: [String!]
+  tokenType_contains: String
+  tokenType_not_contains: String
+  tokenType_starts_with: String
+  tokenType_not_starts_with: String
+  tokenType_ends_with: String
+  tokenType_not_ends_with: String
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+}
+
+enum FxTokenMapping_orderBy {
+  id
+  counter
+  contractAddress
+  rootToken
+  childToken
+  tokenType
+  timestamp
+  transactionHash
+}
+
+type FxWithdraw {
+  id: ID!
+  counter: BigInt!
+  contractAddress: Bytes!
+  rootToken: Bytes!
+  childToken: Bytes!
+  tokenType: String!
+  userAddress: Bytes!
+  amount: BigInt
+  tokenId: BigInt
+  timestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type FxWithdrawCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input FxWithdrawCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum FxWithdrawCounter_orderBy {
+  id
+  current
+}
+
+input FxWithdraw_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  contractAddress: Bytes
+  contractAddress_not: Bytes
+  contractAddress_in: [Bytes!]
+  contractAddress_not_in: [Bytes!]
+  contractAddress_contains: Bytes
+  contractAddress_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  childToken: Bytes
+  childToken_not: Bytes
+  childToken_in: [Bytes!]
+  childToken_not_in: [Bytes!]
+  childToken_contains: Bytes
+  childToken_not_contains: Bytes
+  tokenType: String
+  tokenType_not: String
+  tokenType_gt: String
+  tokenType_lt: String
+  tokenType_gte: String
+  tokenType_lte: String
+  tokenType_in: [String!]
+  tokenType_not_in: [String!]
+  tokenType_contains: String
+  tokenType_not_contains: String
+  tokenType_starts_with: String
+  tokenType_not_starts_with: String
+  tokenType_ends_with: String
+  tokenType_not_ends_with: String
+  userAddress: Bytes
+  userAddress_not: Bytes
+  userAddress_in: [Bytes!]
+  userAddress_not_in: [Bytes!]
+  userAddress_contains: Bytes
+  userAddress_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  tokenId: BigInt
+  tokenId_not: BigInt
+  tokenId_gt: BigInt
+  tokenId_lt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+}
+
+enum FxWithdraw_orderBy {
+  id
+  counter
+  contractAddress
+  rootToken
+  childToken
+  tokenType
+  userAddress
+  amount
+  tokenId
+  timestamp
+  transactionHash
+}
+
+type GlobalDelegatorCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input GlobalDelegatorCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum GlobalDelegatorCounter_orderBy {
+  id
+  current
+}
+
+type GlobalPlasmaExitCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input GlobalPlasmaExitCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum GlobalPlasmaExitCounter_orderBy {
+  id
+  current
+}
+
+enum OrderDirection {
+  asc
+  desc
+}
+
+type PlasmaExit {
+  id: ID!
+  counter: BigInt!
+  exitId: BigInt!
+  exitInitiator: Bytes
+  exitCompleter: Bytes
+  token: Bytes
+  amount: BigInt
+  isRegularExit: Boolean!
+  exited: Int!
+  exitStartedTxHash: Bytes
+  exitStartedTimeStamp: BigInt
+  exitCancelledTxHash: Bytes
+  exitCancelledTimeStamp: BigInt
+  exitCompletedTxHash: Bytes
+  exitCompletedTimeStamp: BigInt
+}
+
+input PlasmaExit_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  exitId: BigInt
+  exitId_not: BigInt
+  exitId_gt: BigInt
+  exitId_lt: BigInt
+  exitId_gte: BigInt
+  exitId_lte: BigInt
+  exitId_in: [BigInt!]
+  exitId_not_in: [BigInt!]
+  exitInitiator: Bytes
+  exitInitiator_not: Bytes
+  exitInitiator_in: [Bytes!]
+  exitInitiator_not_in: [Bytes!]
+  exitInitiator_contains: Bytes
+  exitInitiator_not_contains: Bytes
+  exitCompleter: Bytes
+  exitCompleter_not: Bytes
+  exitCompleter_in: [Bytes!]
+  exitCompleter_not_in: [Bytes!]
+  exitCompleter_contains: Bytes
+  exitCompleter_not_contains: Bytes
+  token: Bytes
+  token_not: Bytes
+  token_in: [Bytes!]
+  token_not_in: [Bytes!]
+  token_contains: Bytes
+  token_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  isRegularExit: Boolean
+  isRegularExit_not: Boolean
+  isRegularExit_in: [Boolean!]
+  isRegularExit_not_in: [Boolean!]
+  exited: Int
+  exited_not: Int
+  exited_gt: Int
+  exited_lt: Int
+  exited_gte: Int
+  exited_lte: Int
+  exited_in: [Int!]
+  exited_not_in: [Int!]
+  exitStartedTxHash: Bytes
+  exitStartedTxHash_not: Bytes
+  exitStartedTxHash_in: [Bytes!]
+  exitStartedTxHash_not_in: [Bytes!]
+  exitStartedTxHash_contains: Bytes
+  exitStartedTxHash_not_contains: Bytes
+  exitStartedTimeStamp: BigInt
+  exitStartedTimeStamp_not: BigInt
+  exitStartedTimeStamp_gt: BigInt
+  exitStartedTimeStamp_lt: BigInt
+  exitStartedTimeStamp_gte: BigInt
+  exitStartedTimeStamp_lte: BigInt
+  exitStartedTimeStamp_in: [BigInt!]
+  exitStartedTimeStamp_not_in: [BigInt!]
+  exitCancelledTxHash: Bytes
+  exitCancelledTxHash_not: Bytes
+  exitCancelledTxHash_in: [Bytes!]
+  exitCancelledTxHash_not_in: [Bytes!]
+  exitCancelledTxHash_contains: Bytes
+  exitCancelledTxHash_not_contains: Bytes
+  exitCancelledTimeStamp: BigInt
+  exitCancelledTimeStamp_not: BigInt
+  exitCancelledTimeStamp_gt: BigInt
+  exitCancelledTimeStamp_lt: BigInt
+  exitCancelledTimeStamp_gte: BigInt
+  exitCancelledTimeStamp_lte: BigInt
+  exitCancelledTimeStamp_in: [BigInt!]
+  exitCancelledTimeStamp_not_in: [BigInt!]
+  exitCompletedTxHash: Bytes
+  exitCompletedTxHash_not: Bytes
+  exitCompletedTxHash_in: [Bytes!]
+  exitCompletedTxHash_not_in: [Bytes!]
+  exitCompletedTxHash_contains: Bytes
+  exitCompletedTxHash_not_contains: Bytes
+  exitCompletedTimeStamp: BigInt
+  exitCompletedTimeStamp_not: BigInt
+  exitCompletedTimeStamp_gt: BigInt
+  exitCompletedTimeStamp_lt: BigInt
+  exitCompletedTimeStamp_gte: BigInt
+  exitCompletedTimeStamp_lte: BigInt
+  exitCompletedTimeStamp_in: [BigInt!]
+  exitCompletedTimeStamp_not_in: [BigInt!]
+}
+
+enum PlasmaExit_orderBy {
+  id
+  counter
+  exitId
+  exitInitiator
+  exitCompleter
+  token
+  amount
+  isRegularExit
+  exited
+  exitStartedTxHash
+  exitStartedTimeStamp
+  exitCancelledTxHash
+  exitCancelledTimeStamp
+  exitCompletedTxHash
+  exitCompletedTimeStamp
+}
+
+type PredicateRegistration {
+  id: ID!
+  tokenType: Bytes!
+  predicateAddress: Bytes!
+  timestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+input PredicateRegistration_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  tokenType: Bytes
+  tokenType_not: Bytes
+  tokenType_in: [Bytes!]
+  tokenType_not_in: [Bytes!]
+  tokenType_contains: Bytes
+  tokenType_not_contains: Bytes
+  predicateAddress: Bytes
+  predicateAddress_not: Bytes
+  predicateAddress_in: [Bytes!]
+  predicateAddress_not_in: [Bytes!]
+  predicateAddress_contains: Bytes
+  predicateAddress_not_contains: Bytes
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+}
+
+enum PredicateRegistration_orderBy {
+  id
+  tokenType
+  predicateAddress
+  timestamp
+  transactionHash
+}
+
+type Query {
+  checkpoint(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): Checkpoint
+  checkpoints(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Checkpoint_orderBy
+    orderDirection: OrderDirection
+    where: Checkpoint_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [Checkpoint!]!
+  validator(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): Validator
+  validators(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Validator_orderBy
+    orderDirection: OrderDirection
+    where: Validator_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [Validator!]!
+  globalDelegatorCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): GlobalDelegatorCounter
+  globalDelegatorCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: GlobalDelegatorCounter_orderBy
+    orderDirection: OrderDirection
+    where: GlobalDelegatorCounter_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [GlobalDelegatorCounter!]!
+  delegator(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): Delegator
+  delegators(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Delegator_orderBy
+    orderDirection: OrderDirection
+    where: Delegator_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [Delegator!]!
+  topup(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): Topup
+  topups(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Topup_orderBy
+    orderDirection: OrderDirection
+    where: Topup_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [Topup!]!
+  stakingParams(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakingParams_orderBy
+    orderDirection: OrderDirection
+    where: StakingParams_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [StakingParams!]!
+  stakingNFTTransfer(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): StakingNFTTransfer
+  stakingNFTTransfers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakingNFTTransfer_orderBy
+    orderDirection: OrderDirection
+    where: StakingNFTTransfer_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [StakingNFTTransfer!]!
+  delegatorUnbond(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): DelegatorUnbond
+  delegatorUnbonds(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: DelegatorUnbond_orderBy
+    orderDirection: OrderDirection
+    where: DelegatorUnbond_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): [DelegatorUnbond!]!
+
+  # Access to subgraph metadata
+  _meta(block: Block_height): _Meta_
+}
+
+type StakingNFTTransfer {
+  id: ID!
+  tokenId: BigInt!
+  currentOwner: Bytes!
+  previousOwners: [Bytes!]!
+  transactionHashes: [Bytes!]!
+}
+
+input StakingNFTTransfer_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  tokenId: BigInt
+  tokenId_not: BigInt
+  tokenId_gt: BigInt
+  tokenId_lt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  currentOwner: Bytes
+  currentOwner_not: Bytes
+  currentOwner_in: [Bytes!]
+  currentOwner_not_in: [Bytes!]
+  currentOwner_contains: Bytes
+  currentOwner_not_contains: Bytes
+  previousOwners: [Bytes!]
+  previousOwners_not: [Bytes!]
+  previousOwners_contains: [Bytes!]
+  previousOwners_not_contains: [Bytes!]
+  transactionHashes: [Bytes!]
+  transactionHashes_not: [Bytes!]
+  transactionHashes_contains: [Bytes!]
+  transactionHashes_not_contains: [Bytes!]
+}
+
+enum StakingNFTTransfer_orderBy {
+  id
+  tokenId
+  currentOwner
+  previousOwners
+  transactionHashes
+}
+
+type StakingParams {
+  id: ID!
+  owner: Bytes
+  validatorThreshold: BigInt!
+  proposerBonus: BigInt!
+  dynasty: BigInt!
+  liquidatedRewards: BigInt!
+}
+
+input StakingParams_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  owner: Bytes
+  owner_not: Bytes
+  owner_in: [Bytes!]
+  owner_not_in: [Bytes!]
+  owner_contains: Bytes
+  owner_not_contains: Bytes
+  validatorThreshold: BigInt
+  validatorThreshold_not: BigInt
+  validatorThreshold_gt: BigInt
+  validatorThreshold_lt: BigInt
+  validatorThreshold_gte: BigInt
+  validatorThreshold_lte: BigInt
+  validatorThreshold_in: [BigInt!]
+  validatorThreshold_not_in: [BigInt!]
+  proposerBonus: BigInt
+  proposerBonus_not: BigInt
+  proposerBonus_gt: BigInt
+  proposerBonus_lt: BigInt
+  proposerBonus_gte: BigInt
+  proposerBonus_lte: BigInt
+  proposerBonus_in: [BigInt!]
+  proposerBonus_not_in: [BigInt!]
+  dynasty: BigInt
+  dynasty_not: BigInt
+  dynasty_gt: BigInt
+  dynasty_lt: BigInt
+  dynasty_gte: BigInt
+  dynasty_lte: BigInt
+  dynasty_in: [BigInt!]
+  dynasty_not_in: [BigInt!]
+  liquidatedRewards: BigInt
+  liquidatedRewards_not: BigInt
+  liquidatedRewards_gt: BigInt
+  liquidatedRewards_lt: BigInt
+  liquidatedRewards_gte: BigInt
+  liquidatedRewards_lte: BigInt
+  liquidatedRewards_in: [BigInt!]
+  liquidatedRewards_not_in: [BigInt!]
+}
+
+enum StakingParams_orderBy {
+  id
+  owner
+  validatorThreshold
+  proposerBonus
+  dynasty
+  liquidatedRewards
+}
+
+type StateRegistration {
+  id: ID!
+  user: Bytes!
+  receiver: Bytes!
+  sender: Bytes!
+}
+
+input StateRegistration_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  user: Bytes
+  user_not: Bytes
+  user_in: [Bytes!]
+  user_not_in: [Bytes!]
+  user_contains: Bytes
+  user_not_contains: Bytes
+  receiver: Bytes
+  receiver_not: Bytes
+  receiver_in: [Bytes!]
+  receiver_not_in: [Bytes!]
+  receiver_contains: Bytes
+  receiver_not_contains: Bytes
+  sender: Bytes
+  sender_not: Bytes
+  sender_in: [Bytes!]
+  sender_not_in: [Bytes!]
+  sender_contains: Bytes
+  sender_not_contains: Bytes
+}
+
+enum StateRegistration_orderBy {
+  id
+  user
+  receiver
+  sender
+}
+
+type StateSync {
+  id: ID!
+  stateId: BigInt!
+  contract: Bytes!
+  syncType: Int!
+  depositorOrRootToken: String!
+  depositedTokenOrChildToken: String!
+  data: String!
+  transactionHash: Bytes!
+  timestamp: BigInt!
+}
+
+input StateSync_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  stateId: BigInt
+  stateId_not: BigInt
+  stateId_gt: BigInt
+  stateId_lt: BigInt
+  stateId_gte: BigInt
+  stateId_lte: BigInt
+  stateId_in: [BigInt!]
+  stateId_not_in: [BigInt!]
+  contract: Bytes
+  contract_not: Bytes
+  contract_in: [Bytes!]
+  contract_not_in: [Bytes!]
+  contract_contains: Bytes
+  contract_not_contains: Bytes
+  syncType: Int
+  syncType_not: Int
+  syncType_gt: Int
+  syncType_lt: Int
+  syncType_gte: Int
+  syncType_lte: Int
+  syncType_in: [Int!]
+  syncType_not_in: [Int!]
+  depositorOrRootToken: String
+  depositorOrRootToken_not: String
+  depositorOrRootToken_gt: String
+  depositorOrRootToken_lt: String
+  depositorOrRootToken_gte: String
+  depositorOrRootToken_lte: String
+  depositorOrRootToken_in: [String!]
+  depositorOrRootToken_not_in: [String!]
+  depositorOrRootToken_contains: String
+  depositorOrRootToken_not_contains: String
+  depositorOrRootToken_starts_with: String
+  depositorOrRootToken_not_starts_with: String
+  depositorOrRootToken_ends_with: String
+  depositorOrRootToken_not_ends_with: String
+  depositedTokenOrChildToken: String
+  depositedTokenOrChildToken_not: String
+  depositedTokenOrChildToken_gt: String
+  depositedTokenOrChildToken_lt: String
+  depositedTokenOrChildToken_gte: String
+  depositedTokenOrChildToken_lte: String
+  depositedTokenOrChildToken_in: [String!]
+  depositedTokenOrChildToken_not_in: [String!]
+  depositedTokenOrChildToken_contains: String
+  depositedTokenOrChildToken_not_contains: String
+  depositedTokenOrChildToken_starts_with: String
+  depositedTokenOrChildToken_not_starts_with: String
+  depositedTokenOrChildToken_ends_with: String
+  depositedTokenOrChildToken_not_ends_with: String
+  data: String
+  data_not: String
+  data_gt: String
+  data_lt: String
+  data_gte: String
+  data_lte: String
+  data_in: [String!]
+  data_not_in: [String!]
+  data_contains: String
+  data_not_contains: String
+  data_starts_with: String
+  data_not_starts_with: String
+  data_ends_with: String
+  data_not_ends_with: String
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+}
+
+enum StateSync_orderBy {
+  id
+  stateId
+  contract
+  syncType
+  depositorOrRootToken
+  depositedTokenOrChildToken
+  data
+  transactionHash
+  timestamp
+}
+
+type Subscription {
+  checkpoint(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): Checkpoint
+  checkpoints(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Checkpoint_orderBy
+    orderDirection: OrderDirection
+    where: Checkpoint_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [Checkpoint!]!
+  stateSync(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): StateSync
+  stateSyncs(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StateSync_orderBy
+    orderDirection: OrderDirection
+    where: StateSync_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [StateSync!]!
+  stateRegistration(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): StateRegistration
+  stateRegistrations(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StateRegistration_orderBy
+    orderDirection: OrderDirection
+    where: StateRegistration_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [StateRegistration!]!
+  plasmaExit(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): PlasmaExit
+  plasmaExits(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PlasmaExit_orderBy
+    orderDirection: OrderDirection
+    where: PlasmaExit_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [PlasmaExit!]!
+  predicateRegistration(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): PredicateRegistration
+  predicateRegistrations(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PredicateRegistration_orderBy
+    orderDirection: OrderDirection
+    where: PredicateRegistration_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [PredicateRegistration!]!
+  tokenMapping(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): TokenMapping
+  tokenMappings(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: TokenMapping_orderBy
+    orderDirection: OrderDirection
+    where: TokenMapping_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [TokenMapping!]!
+  fxTokenMapping(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): FxTokenMapping
+  fxTokenMappings(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FxTokenMapping_orderBy
+    orderDirection: OrderDirection
+    where: FxTokenMapping_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [FxTokenMapping!]!
+  fxTokenMappingCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): FxTokenMappingCounter
+  fxTokenMappingCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FxTokenMappingCounter_orderBy
+    orderDirection: OrderDirection
+    where: FxTokenMappingCounter_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [FxTokenMappingCounter!]!
+  fxDeposit(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): FxDeposit
+  fxDeposits(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FxDeposit_orderBy
+    orderDirection: OrderDirection
+    where: FxDeposit_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [FxDeposit!]!
+  fxDepositCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): FxDepositCounter
+  fxDepositCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FxDepositCounter_orderBy
+    orderDirection: OrderDirection
+    where: FxDepositCounter_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [FxDepositCounter!]!
+  fxWithdraw(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): FxWithdraw
+  fxWithdraws(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FxWithdraw_orderBy
+    orderDirection: OrderDirection
+    where: FxWithdraw_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [FxWithdraw!]!
+  fxWithdrawCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): FxWithdrawCounter
+  fxWithdrawCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FxWithdrawCounter_orderBy
+    orderDirection: OrderDirection
+    where: FxWithdrawCounter_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [FxWithdrawCounter!]!
+  validator(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): Validator
+  validators(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Validator_orderBy
+    orderDirection: OrderDirection
+    where: Validator_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [Validator!]!
+  globalDelegatorCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): GlobalDelegatorCounter
+  globalDelegatorCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: GlobalDelegatorCounter_orderBy
+    orderDirection: OrderDirection
+    where: GlobalDelegatorCounter_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [GlobalDelegatorCounter!]!
+  globalPlasmaExitCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): GlobalPlasmaExitCounter
+  globalPlasmaExitCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: GlobalPlasmaExitCounter_orderBy
+    orderDirection: OrderDirection
+    where: GlobalPlasmaExitCounter_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [GlobalPlasmaExitCounter!]!
+  delegator(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): Delegator
+  delegators(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Delegator_orderBy
+    orderDirection: OrderDirection
+    where: Delegator_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [Delegator!]!
+  topup(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): Topup
+  topups(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Topup_orderBy
+    orderDirection: OrderDirection
+    where: Topup_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [Topup!]!
+  stakingParams(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakingParams_orderBy
+    orderDirection: OrderDirection
+    where: StakingParams_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [StakingParams!]!
+  stakingNFTTransfer(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): StakingNFTTransfer
+  stakingNFTTransfers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakingNFTTransfer_orderBy
+    orderDirection: OrderDirection
+    where: StakingNFTTransfer_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [StakingNFTTransfer!]!
+  delegatorUnbond(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): DelegatorUnbond
+  delegatorUnbonds(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: DelegatorUnbond_orderBy
+    orderDirection: OrderDirection
+    where: DelegatorUnbond_filter
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    block: Block_height
+  ): [DelegatorUnbond!]!
+
+  # Access to subgraph metadata
+  _meta(block: Block_height): _Meta_
+}
+
+type TokenMapping {
+  id: ID!
+  rootToken: Bytes!
+  childToken: Bytes!
+  tokenType: String!
+  isPOS: Boolean!
+  timestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+input TokenMapping_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  childToken: Bytes
+  childToken_not: Bytes
+  childToken_in: [Bytes!]
+  childToken_not_in: [Bytes!]
+  childToken_contains: Bytes
+  childToken_not_contains: Bytes
+  tokenType: String
+  tokenType_not: String
+  tokenType_gt: String
+  tokenType_lt: String
+  tokenType_gte: String
+  tokenType_lte: String
+  tokenType_in: [String!]
+  tokenType_not_in: [String!]
+  tokenType_contains: String
+  tokenType_not_contains: String
+  tokenType_starts_with: String
+  tokenType_not_starts_with: String
+  tokenType_ends_with: String
+  tokenType_not_ends_with: String
+  isPOS: Boolean
+  isPOS_not: Boolean
+  isPOS_in: [Boolean!]
+  isPOS_not_in: [Boolean!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+  transactionHash_contains: Bytes
+  transactionHash_not_contains: Bytes
+}
+
+enum TokenMapping_orderBy {
+  id
+  rootToken
+  childToken
+  tokenType
+  isPOS
+  timestamp
+  transactionHash
+}
+
+type Topup {
+  id: ID!
+  address: Bytes!
+  topupAmount: BigInt!
+  withdrawAmount: BigInt!
+}
+
+input Topup_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  address: Bytes
+  address_not: Bytes
+  address_in: [Bytes!]
+  address_not_in: [Bytes!]
+  address_contains: Bytes
+  address_not_contains: Bytes
+  topupAmount: BigInt
+  topupAmount_not: BigInt
+  topupAmount_gt: BigInt
+  topupAmount_lt: BigInt
+  topupAmount_gte: BigInt
+  topupAmount_lte: BigInt
+  topupAmount_in: [BigInt!]
+  topupAmount_not_in: [BigInt!]
+  withdrawAmount: BigInt
+  withdrawAmount_not: BigInt
+  withdrawAmount_gt: BigInt
+  withdrawAmount_lt: BigInt
+  withdrawAmount_gte: BigInt
+  withdrawAmount_lte: BigInt
+  withdrawAmount_in: [BigInt!]
+  withdrawAmount_not_in: [BigInt!]
+}
+
+enum Topup_orderBy {
+  id
+  address
+  topupAmount
+  withdrawAmount
+}
+
+type Validator {
+  id: ID!
+  validatorId: BigInt!
+  owner: Bytes!
+  signer: Bytes!
+  signerPubKey: Bytes!
+  liquidatedRewards: BigInt!
+  activationEpoch: BigInt!
+  deactivationEpoch: BigInt!
+  totalStaked: BigInt!
+  selfStake: BigInt!
+  delegatedStake: BigInt!
+  commissionRate: BigInt!
+  nonce: BigInt!
+  status: Int!
+  jailEndEpoch: BigInt!
+  auctionAmount: BigInt!
+  isInAuction: Boolean!
+}
+
+input Validator_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  validatorId: BigInt
+  validatorId_not: BigInt
+  validatorId_gt: BigInt
+  validatorId_lt: BigInt
+  validatorId_gte: BigInt
+  validatorId_lte: BigInt
+  validatorId_in: [BigInt!]
+  validatorId_not_in: [BigInt!]
+  owner: Bytes
+  owner_not: Bytes
+  owner_in: [Bytes!]
+  owner_not_in: [Bytes!]
+  owner_contains: Bytes
+  owner_not_contains: Bytes
+  signer: Bytes
+  signer_not: Bytes
+  signer_in: [Bytes!]
+  signer_not_in: [Bytes!]
+  signer_contains: Bytes
+  signer_not_contains: Bytes
+  signerPubKey: Bytes
+  signerPubKey_not: Bytes
+  signerPubKey_in: [Bytes!]
+  signerPubKey_not_in: [Bytes!]
+  signerPubKey_contains: Bytes
+  signerPubKey_not_contains: Bytes
+  liquidatedRewards: BigInt
+  liquidatedRewards_not: BigInt
+  liquidatedRewards_gt: BigInt
+  liquidatedRewards_lt: BigInt
+  liquidatedRewards_gte: BigInt
+  liquidatedRewards_lte: BigInt
+  liquidatedRewards_in: [BigInt!]
+  liquidatedRewards_not_in: [BigInt!]
+  activationEpoch: BigInt
+  activationEpoch_not: BigInt
+  activationEpoch_gt: BigInt
+  activationEpoch_lt: BigInt
+  activationEpoch_gte: BigInt
+  activationEpoch_lte: BigInt
+  activationEpoch_in: [BigInt!]
+  activationEpoch_not_in: [BigInt!]
+  deactivationEpoch: BigInt
+  deactivationEpoch_not: BigInt
+  deactivationEpoch_gt: BigInt
+  deactivationEpoch_lt: BigInt
+  deactivationEpoch_gte: BigInt
+  deactivationEpoch_lte: BigInt
+  deactivationEpoch_in: [BigInt!]
+  deactivationEpoch_not_in: [BigInt!]
+  totalStaked: BigInt
+  totalStaked_not: BigInt
+  totalStaked_gt: BigInt
+  totalStaked_lt: BigInt
+  totalStaked_gte: BigInt
+  totalStaked_lte: BigInt
+  totalStaked_in: [BigInt!]
+  totalStaked_not_in: [BigInt!]
+  selfStake: BigInt
+  selfStake_not: BigInt
+  selfStake_gt: BigInt
+  selfStake_lt: BigInt
+  selfStake_gte: BigInt
+  selfStake_lte: BigInt
+  selfStake_in: [BigInt!]
+  selfStake_not_in: [BigInt!]
+  delegatedStake: BigInt
+  delegatedStake_not: BigInt
+  delegatedStake_gt: BigInt
+  delegatedStake_lt: BigInt
+  delegatedStake_gte: BigInt
+  delegatedStake_lte: BigInt
+  delegatedStake_in: [BigInt!]
+  delegatedStake_not_in: [BigInt!]
+  commissionRate: BigInt
+  commissionRate_not: BigInt
+  commissionRate_gt: BigInt
+  commissionRate_lt: BigInt
+  commissionRate_gte: BigInt
+  commissionRate_lte: BigInt
+  commissionRate_in: [BigInt!]
+  commissionRate_not_in: [BigInt!]
+  nonce: BigInt
+  nonce_not: BigInt
+  nonce_gt: BigInt
+  nonce_lt: BigInt
+  nonce_gte: BigInt
+  nonce_lte: BigInt
+  nonce_in: [BigInt!]
+  nonce_not_in: [BigInt!]
+  status: Int
+  status_not: Int
+  status_gt: Int
+  status_lt: Int
+  status_gte: Int
+  status_lte: Int
+  status_in: [Int!]
+  status_not_in: [Int!]
+  jailEndEpoch: BigInt
+  jailEndEpoch_not: BigInt
+  jailEndEpoch_gt: BigInt
+  jailEndEpoch_lt: BigInt
+  jailEndEpoch_gte: BigInt
+  jailEndEpoch_lte: BigInt
+  jailEndEpoch_in: [BigInt!]
+  jailEndEpoch_not_in: [BigInt!]
+  auctionAmount: BigInt
+  auctionAmount_not: BigInt
+  auctionAmount_gt: BigInt
+  auctionAmount_lt: BigInt
+  auctionAmount_gte: BigInt
+  auctionAmount_lte: BigInt
+  auctionAmount_in: [BigInt!]
+  auctionAmount_not_in: [BigInt!]
+  isInAuction: Boolean
+  isInAuction_not: Boolean
+  isInAuction_in: [Boolean!]
+  isInAuction_not_in: [Boolean!]
+}
+
+enum Validator_orderBy {
+  id
+  validatorId
+  owner
+  signer
+  signerPubKey
+  liquidatedRewards
+  activationEpoch
+  deactivationEpoch
+  totalStaked
+  selfStake
+  delegatedStake
+  commissionRate
+  nonce
+  status
+  jailEndEpoch
+  auctionAmount
+  isInAuction
+}
+
+type _Block_ {
+  # The hash of the block
+  hash: Bytes
+
+  # The block number
+  number: Int!
+}
+
+# The type for the top-level _meta field
+type _Meta_ {
+  # Information about a specific subgraph block. The hash of the block
+  # will be null if the _meta field has a block constraint that asks for
+  # a block number. It will be filled if the _meta field has no block constraint
+  # and therefore asks for the latest  block
+  #
+  block: _Block_!
+
+  # The deployment ID
+  deployment: String!
+
+  # If `true`, the subgraph encountered indexing errors at some past block
+  hasIndexingErrors: Boolean!
+}
+
+enum _SubgraphErrorPolicy_ {
+  # Data will be returned even if the subgraph has indexing errors
+  allow
+
+  # If the subgraph has indexing errors, data will be omitted. The default.
+  deny
+}
+
+
+
