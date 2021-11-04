@@ -987,6 +987,110 @@ enum PredicateRegistration_orderBy {
   transactionHash
 }
 
+type ValidatorShareProxy {
+  contractAddress: Bytes!
+  validatorId: BigInt!
+}
+
+enum ValidatorShareProxy_orderBy {
+  validatorId
+}
+
+input ValidatorShareProxy_filter {
+  contractAddress: Bytes
+  contractAddress_not: Bytes
+  contractAddress_in: [Bytes!]
+  contractAddress_not_in: [Bytes!]
+
+  validatorId: BigInt
+  validatorId_not: BigInt
+  validatorId_gt: BigInt
+  validatorId_lt: BigInt
+  validatorId_gte: BigInt
+  validatorId_lte: BigInt
+  validatorId_in: [BigInt!]
+  validatorId_not_in: [BigInt!]
+}
+
+type ValidatorShareProxyEvent {
+  id: ID!
+  contractAddress: Bytes!
+  validatorId: BigInt!
+  VFROM: Bytes!
+  VTO: Bytes!
+  VVALUE: BigInt!
+  blockNumber: BigInt!
+  blockHash: Bytes!
+  transactionHash: Bytes!
+  timestamp: BigInt!
+}
+
+enum ValidatorShareProxyEvent_orderBy {
+  id
+  validatorId
+  blockNumber
+  timestamp
+}
+
+input ValidatorShareProxyEvent_filter {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+
+  contractAddress: Bytes
+  contractAddress_not: Bytes
+  contractAddress_in: [Bytes!]
+  contractAddress_not_in: [Bytes!]
+
+  validatorId: BigInt
+  validatorId_not: BigInt
+  validatorId_gt: BigInt
+  validatorId_lt: BigInt
+  validatorId_gte: BigInt
+  validatorId_lte: BigInt
+  validatorId_in: [BigInt!]
+  validatorId_not_in: [BigInt!]
+
+  VFROM: Bytes
+  VFROM_not: Bytes
+  VFROM_in: [Bytes!]
+  VFROM_not_in: [Bytes!]
+
+  VTO: Bytes
+  VTO_not: Bytes
+  VTO_in: [Bytes!]
+  VTO_not_in: [Bytes!]
+
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+
+  blockHash: Bytes
+  blockHash_not: Bytes
+  blockHash_in: [Bytes!]
+  blockHash_not_in: [Bytes!]
+
+  transactionHash: Bytes
+  transactionHash_not: Bytes
+  transactionHash_in: [Bytes!]
+  transactionHash_not_in: [Bytes!]
+
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+}
+
 type Query {
   checkpoint(
     id: ID!
@@ -1110,6 +1214,28 @@ type Query {
     # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
     # block: Block_height
   ): [DelegatorUnbond!]!
+
+  validatorShareProxies(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ValidatorShareProxy_orderBy
+    orderDirection: OrderDirection
+    where: ValidatorShareProxy_filter
+  ): [ValidatorShareProxy!]!
+
+  validatorShareProxyEvent(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): ValidatorShareProxyEvent
+  validatorShareProxyEvents(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ValidatorShareProxyEvent_orderBy
+    orderDirection: OrderDirection
+    where: ValidatorShareProxyEvent_filter
+  ): [ValidatorShareProxyEvent!]!
 
   # Access to subgraph metadata
   _meta(block: Block_height): _Meta_
