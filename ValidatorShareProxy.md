@@ -114,6 +114,34 @@ input ValidatorShareProxyEvent_filter {
 }
 ```
 
+### Query Define
+```
+type Query {
+
+  ...
+
+  validatorShareProxies(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ValidatorShareProxy_orderBy
+    orderDirection: OrderDirection
+    where: ValidatorShareProxy_filter
+  ): [ValidatorShareProxy!]!
+
+  validatorShareProxyEvent(
+    id: ID!
+
+  ): ValidatorShareProxyEvent
+  validatorShareProxyEvents(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ValidatorShareProxyEvent_orderBy
+    orderDirection: OrderDirection
+    where: ValidatorShareProxyEvent_filter
+  ): [ValidatorShareProxyEvent!]!
+}
+```
+
 ### Example Query
 ```
 {
