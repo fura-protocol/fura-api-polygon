@@ -1,14 +1,14 @@
-# Polygon Staking
+# Polygon Info
 
-### Fura - Polygon Staking GraphQL Endpoint
-https://polygon.furadao.org/subgraphs/name/staking
+### Fura - Polygon Info GraphQL Endpoint
+https://polygon.furadao.org/subgraphs/name/root
 
 ### Code Configuration
 
 ```
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://polygon.furadao.org/subgraphs/name/staking',
+    uri: 'https://polygon.furadao.org/subgraphs/name/root',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -16,7 +16,7 @@ export const client = new ApolloClient({
 ```
 
 ### CORS Settings
-https://polygon.furadao.org/subgraphs/name/staking 
+https://polygon.furadao.org/subgraphs/name/root 
 
 now supports:
 ```
@@ -28,7 +28,7 @@ wallet.polygon.technology
 ```
 
 ### Full Schema
-check [schema.graphql](https://github.com/furaprotocol/polygon-staking-info/blob/main/schema.graphql)
+check [schema.graphql](https://github.com/furaprotocol/polygon-info/blob/main/schema.graphql)
 
 
 ### Use Playground

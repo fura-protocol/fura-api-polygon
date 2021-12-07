@@ -209,7 +209,7 @@ type Query {
 ```
 
 ### Full Schema
-check [schema.graphql](https://github.com/furaprotocol/polygon-staking-info/blob/main/schema.graphql)
+check [schema.graphql](https://github.com/furaprotocol/polygon-info/blob/main/schema.graphql)
 
 
 ### Use Playground
