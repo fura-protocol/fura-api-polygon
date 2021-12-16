@@ -20,7 +20,13 @@ export const client = new ApolloClient({
 
 ### 2. Subscription:
 
-Websocket protocols are currently supported, both with [subscriptions-transport-ws](https://github.com/apollographql/subscriptions-transport-ws) and [graphql-ws](https://github.com/enisdenjo/graphql-ws)  
+#### WebSocket Secure Endpoint
+
+```
+wss://polygon.furadao.org/subgraphs/name/root
+```
+
+WebSocket protocols are currently supported, both with [subscriptions-transport-ws](https://github.com/apollographql/subscriptions-transport-ws) and [graphql-ws](https://github.com/enisdenjo/graphql-ws)  
 
 https://github.com/apollographql/subscriptions-transport-ws/blob/master/PROTOCOL.md  
 
@@ -65,5 +71,5 @@ check [schema.graphql](https://github.com/furaprotocol/polygon-info/blob/main/sc
 ## Use Playground
 https://github.com/graphql/graphql-playground  
 
-http://github.com/graphql/graphiql
+https://github.com/graphql/graphiql
 
