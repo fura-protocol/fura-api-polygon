@@ -1,7 +1,7 @@
 # Polygon Info
 
 ### Fura - Polygon Info GraphQL Endpoint
-https://polygon.furadao.org/subgraphs/name/root
+https://api.fura.org/subgraphs/name/polygon
 
 ## Code Configuration
 
@@ -11,7 +11,7 @@ https://polygon.furadao.org/subgraphs/name/root
 ```
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://polygon.furadao.org/subgraphs/name/root',
+    uri: 'https://api.fura.org/subgraphs/name/polygon',
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
@@ -23,7 +23,7 @@ export const client = new ApolloClient({
 #### WebSocket Secure Endpoint
 
 ```
-wss://polygon.furadao.org/subgraphs/name/root
+wss://api.fura.org/subgraphs/name/polygon
 ```
 
 WebSocket protocols are currently supported, both with [subscriptions-transport-ws](https://github.com/apollographql/subscriptions-transport-ws) and [graphql-ws](https://github.com/enisdenjo/graphql-ws)  
@@ -40,7 +40,7 @@ Check links above for more details
 import { SubscriptionClient } from 'subscriptions-transport-ws';
 import ApolloClient from 'apollo-client';
 
-const GRAPHQL_ENDPOINT = 'wss://polygon.furadao.org/subgraphs/name/root';
+const GRAPHQL_ENDPOINT = 'wss://api.fura.org/subgraphs/name/polygon';
 
 const client = new SubscriptionClient(GRAPHQL_ENDPOINT, {
   reconnect: true,
@@ -52,7 +52,7 @@ const apolloClient = new ApolloClient({
 ```
 
 ## CORS Settings
-https://polygon.furadao.org/subgraphs/name/root 
+https://api.fura.org/subgraphs/name/polygon 
 
 now supports:
 ```
@@ -65,7 +65,7 @@ polygon.technology
 ```
 
 ## Full Schema
-check [schema.graphql](https://github.com/furaprotocol/polygon-info/blob/main/schema.graphql)
+check [schema.graphql](https://github.com/fura-protocol/fura-api-polygon/blob/main/schema.graphql)
 
 
 ## Use Playground
