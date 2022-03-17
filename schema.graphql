@@ -1546,6 +1546,427 @@ type Query {
     where: ValidatorShareProxyEvent_filter
   ): [ValidatorShareProxyEvent!]!
 
+  lockTokensERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC20
+  lockTokensERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC20_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC20!]!
+  lockTokensERC721(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC721
+  lockTokensERC721S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC721_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC721_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC721!]!
+  lockTokensERC1155(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC1155
+  lockTokensERC1155S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC1155_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC1155_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC1155!]!
+  plasmaDepositsERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): PlasmaDepositsERC20
+  plasmaDepositsERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PlasmaDepositsERC20_orderBy
+    orderDirection: OrderDirection
+    where: PlasmaDepositsERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [PlasmaDepositsERC20!]!
+  plasmaDepositERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): PlasmaDepositERC20Counter
+  plasmaDepositERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PlasmaDepositERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: PlasmaDepositERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [PlasmaDepositERC20Counter!]!
+  exitTokensERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC20
+  exitTokensERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC20_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC20!]!
+  exitTokensERC721(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC721
+  exitTokensERC721S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC721_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC721_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC721!]!
+  exitTokensERC1155(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC1155
+  exitTokensERC1155S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC1155_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC1155_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC1155!]!
+  lockEther(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockEther
+  lockEthers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockEther_orderBy
+    orderDirection: OrderDirection
+    where: LockEther_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockEther!]!
+  exitEther(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitEther
+  exitEthers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitEther_orderBy
+    orderDirection: OrderDirection
+    where: ExitEther_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitEther!]!
+  
+  lockTokensERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC20Counter
+  lockTokensERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC20Counter!]!
+  lockTokensERC721Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC721Counter
+  lockTokensERC721Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC721Counter_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC721Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC721Counter!]!
+  lockTokensERC1155Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC1155Counter
+  lockTokensERC1155Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC1155Counter_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC1155Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC1155Counter!]!
+  lockEtherCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockEtherCounter
+  lockEtherCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockEtherCounter_orderBy
+    orderDirection: OrderDirection
+    where: LockEtherCounter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockEtherCounter!]!
+  exitTokensERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC20Counter
+  exitTokensERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC20Counter!]!
+  exitTokensERC721Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC721Counter
+  exitTokensERC721Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC721Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC721Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC721Counter!]!
+  exitTokensERC1155Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC1155Counter
+  exitTokensERC1155Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC1155Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC1155Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC1155Counter!]!
+  exitEtherCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitEtherCounter
+  exitEtherCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitEtherCounter_orderBy
+    orderDirection: OrderDirection
+    where: ExitEtherCounter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitEtherCounter!]!
+
+  tokenMappingCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): TokenMappingCounter
+  tokenMappingCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: TokenMappingCounter_orderBy
+    orderDirection: OrderDirection
+    where: TokenMappingCounter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [TokenMappingCounter!]!
+
   # Access to subgraph metadata
   _meta(block: Block_height): _Meta_
 }
@@ -1826,8 +2247,11 @@ type Subscription {
   checkpoint(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): Checkpoint
   checkpoints(
     skip: Int = 0
@@ -1836,14 +2260,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: Checkpoint_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [Checkpoint!]!
   stateSync(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): StateSync
   stateSyncs(
     skip: Int = 0
@@ -1852,14 +2282,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: StateSync_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [StateSync!]!
   stateRegistration(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): StateRegistration
   stateRegistrations(
     skip: Int = 0
@@ -1868,14 +2304,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: StateRegistration_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [StateRegistration!]!
   plasmaExit(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): PlasmaExit
   plasmaExits(
     skip: Int = 0
@@ -1884,14 +2326,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: PlasmaExit_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [PlasmaExit!]!
   predicateRegistration(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): PredicateRegistration
   predicateRegistrations(
     skip: Int = 0
@@ -1900,14 +2348,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: PredicateRegistration_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [PredicateRegistration!]!
   tokenMapping(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): TokenMapping
   tokenMappings(
     skip: Int = 0
@@ -1916,14 +2370,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: TokenMapping_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [TokenMapping!]!
   fxTokenMapping(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): FxTokenMapping
   fxTokenMappings(
     skip: Int = 0
@@ -1932,14 +2392,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: FxTokenMapping_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [FxTokenMapping!]!
   fxTokenMappingCounter(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): FxTokenMappingCounter
   fxTokenMappingCounters(
     skip: Int = 0
@@ -1948,14 +2414,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: FxTokenMappingCounter_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [FxTokenMappingCounter!]!
   fxDeposit(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): FxDeposit
   fxDeposits(
     skip: Int = 0
@@ -1964,14 +2436,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: FxDeposit_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [FxDeposit!]!
   fxDepositCounter(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): FxDepositCounter
   fxDepositCounters(
     skip: Int = 0
@@ -1980,14 +2458,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: FxDepositCounter_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [FxDepositCounter!]!
   fxWithdraw(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): FxWithdraw
   fxWithdraws(
     skip: Int = 0
@@ -1996,14 +2480,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: FxWithdraw_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [FxWithdraw!]!
   fxWithdrawCounter(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): FxWithdrawCounter
   fxWithdrawCounters(
     skip: Int = 0
@@ -2012,14 +2502,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: FxWithdrawCounter_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [FxWithdrawCounter!]!
   validator(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): Validator
   validators(
     skip: Int = 0
@@ -2028,14 +2524,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: Validator_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [Validator!]!
   globalDelegatorCounter(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): GlobalDelegatorCounter
   globalDelegatorCounters(
     skip: Int = 0
@@ -2044,14 +2546,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: GlobalDelegatorCounter_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [GlobalDelegatorCounter!]!
   globalPlasmaExitCounter(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): GlobalPlasmaExitCounter
   globalPlasmaExitCounters(
     skip: Int = 0
@@ -2060,14 +2568,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: GlobalPlasmaExitCounter_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [GlobalPlasmaExitCounter!]!
   delegator(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): Delegator
   delegators(
     skip: Int = 0
@@ -2076,14 +2590,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: Delegator_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [Delegator!]!
   topup(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): Topup
   topups(
     skip: Int = 0
@@ -2092,8 +2612,11 @@ type Subscription {
     orderDirection: OrderDirection
     where: Topup_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [Topup!]!
   stakingParams(
     skip: Int = 0
@@ -2102,14 +2625,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: StakingParams_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [StakingParams!]!
   stakingNFTTransfer(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): StakingNFTTransfer
   stakingNFTTransfers(
     skip: Int = 0
@@ -2118,14 +2647,20 @@ type Subscription {
     orderDirection: OrderDirection
     where: StakingNFTTransfer_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [StakingNFTTransfer!]!
   delegatorUnbond(
     id: ID!
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): DelegatorUnbond
   delegatorUnbonds(
     skip: Int = 0
@@ -2134,9 +2669,455 @@ type Subscription {
     orderDirection: OrderDirection
     where: DelegatorUnbond_filter
 
-    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
-    block: Block_height
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    #subgraphError: _SubgraphErrorPolicy_! = deny
   ): [DelegatorUnbond!]!
+
+  validatorShareProxies(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ValidatorShareProxy_orderBy
+    orderDirection: OrderDirection
+    where: ValidatorShareProxy_filter
+  ): [ValidatorShareProxy!]!
+
+  validatorShareProxyEvent(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    # block: Block_height
+  ): ValidatorShareProxyEvent
+  validatorShareProxyEvents(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ValidatorShareProxyEvent_orderBy
+    orderDirection: OrderDirection
+    where: ValidatorShareProxyEvent_filter
+  ): [ValidatorShareProxyEvent!]!
+
+  lockTokensERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC20
+  lockTokensERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC20_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC20!]!
+  lockTokensERC721(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC721
+  lockTokensERC721S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC721_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC721_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC721!]!
+  lockTokensERC1155(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC1155
+  lockTokensERC1155S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC1155_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC1155_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC1155!]!
+  plasmaDepositsERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): PlasmaDepositsERC20
+  plasmaDepositsERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PlasmaDepositsERC20_orderBy
+    orderDirection: OrderDirection
+    where: PlasmaDepositsERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [PlasmaDepositsERC20!]!
+  plasmaDepositERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): PlasmaDepositERC20Counter
+  plasmaDepositERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PlasmaDepositERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: PlasmaDepositERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [PlasmaDepositERC20Counter!]!
+  exitTokensERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC20
+  exitTokensERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC20_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC20!]!
+  exitTokensERC721(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC721
+  exitTokensERC721S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC721_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC721_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC721!]!
+  exitTokensERC1155(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC1155
+  exitTokensERC1155S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC1155_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC1155_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC1155!]!
+  lockEther(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockEther
+  lockEthers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockEther_orderBy
+    orderDirection: OrderDirection
+    where: LockEther_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockEther!]!
+  exitEther(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitEther
+  exitEthers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitEther_orderBy
+    orderDirection: OrderDirection
+    where: ExitEther_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitEther!]!
+  
+  lockTokensERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC20Counter
+  lockTokensERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC20Counter!]!
+  lockTokensERC721Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC721Counter
+  lockTokensERC721Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC721Counter_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC721Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC721Counter!]!
+  lockTokensERC1155Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockTokensERC1155Counter
+  lockTokensERC1155Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockTokensERC1155Counter_orderBy
+    orderDirection: OrderDirection
+    where: LockTokensERC1155Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockTokensERC1155Counter!]!
+  lockEtherCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): LockEtherCounter
+  lockEtherCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LockEtherCounter_orderBy
+    orderDirection: OrderDirection
+    where: LockEtherCounter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [LockEtherCounter!]!
+  exitTokensERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC20Counter
+  exitTokensERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC20Counter!]!
+  exitTokensERC721Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC721Counter
+  exitTokensERC721Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC721Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC721Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC721Counter!]!
+  exitTokensERC1155Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitTokensERC1155Counter
+  exitTokensERC1155Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitTokensERC1155Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitTokensERC1155Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitTokensERC1155Counter!]!
+  exitEtherCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitEtherCounter
+  exitEtherCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitEtherCounter_orderBy
+    orderDirection: OrderDirection
+    where: ExitEtherCounter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    # block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    # subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitEtherCounter!]!
+
+  tokenMappingCounter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): TokenMappingCounter
+  tokenMappingCounters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: TokenMappingCounter_orderBy
+    orderDirection: OrderDirection
+    where: TokenMappingCounter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [TokenMappingCounter!]!
 
   # Access to subgraph metadata
   _meta(block: Block_height): _Meta_
@@ -2215,6 +3196,35 @@ enum TokenMapping_orderBy {
   isPOS
   timestamp
   transactionHash
+}
+
+type TokenMappingCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input TokenMappingCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum TokenMappingCounter_orderBy {
+  id
+  current
 }
 
 type Topup {
@@ -2465,4 +3475,1095 @@ enum _SubgraphErrorPolicy_ {
   deny
 }
 
+type ExitEther {
+  id: ID!
+  transactionHash: String!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+  counter: BigInt!
+  exitor: Bytes!
+  amount: BigInt!
+}
 
+type ExitEtherCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitEtherCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitEtherCounter_orderBy {
+  id
+  current
+}
+
+input ExitEther_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  exitor: Bytes
+  exitor_not: Bytes
+  exitor_in: [Bytes!]
+  exitor_not_in: [Bytes!]
+  exitor_contains: Bytes
+  exitor_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+}
+
+enum ExitEther_orderBy {
+  id
+  transactionHash
+  blockNumber
+  timestamp
+  counter
+  exitor
+  amount
+}
+
+type ExitTokensERC1155 {
+  id: ID!
+  transactionHash: String!
+  withdrawer: Bytes!
+  rootToken: Bytes!
+  log: Bytes!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type ExitTokensERC1155Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitTokensERC1155Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitTokensERC1155Counter_orderBy {
+  id
+  current
+}
+
+input ExitTokensERC1155_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  withdrawer: Bytes
+  withdrawer_not: Bytes
+  withdrawer_in: [Bytes!]
+  withdrawer_not_in: [Bytes!]
+  withdrawer_contains: Bytes
+  withdrawer_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  log: Bytes
+  log_not: Bytes
+  log_in: [Bytes!]
+  log_not_in: [Bytes!]
+  log_contains: Bytes
+  log_not_contains: Bytes
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum ExitTokensERC1155_orderBy {
+  id
+  transactionHash
+  withdrawer
+  rootToken
+  log
+  counter
+  timestamp
+  blockNumber
+}
+
+type ExitTokensERC20 {
+  id: ID!
+  transactionHash: String!
+  withdrawer: Bytes!
+  rootToken: Bytes!
+  log: Bytes!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type ExitTokensERC20Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitTokensERC20Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitTokensERC20Counter_orderBy {
+  id
+  current
+}
+
+input ExitTokensERC20_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  withdrawer: Bytes
+  withdrawer_not: Bytes
+  withdrawer_in: [Bytes!]
+  withdrawer_not_in: [Bytes!]
+  withdrawer_contains: Bytes
+  withdrawer_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  log: Bytes
+  log_not: Bytes
+  log_in: [Bytes!]
+  log_not_in: [Bytes!]
+  log_contains: Bytes
+  log_not_contains: Bytes
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum ExitTokensERC20_orderBy {
+  id
+  transactionHash
+  withdrawer
+  rootToken
+  log
+  counter
+  timestamp
+  blockNumber
+}
+
+type ExitTokensERC721 {
+  id: ID!
+  transactionHash: String!
+  withdrawer: Bytes!
+  rootToken: Bytes!
+  log: Bytes!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type ExitTokensERC721Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitTokensERC721Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitTokensERC721Counter_orderBy {
+  id
+  current
+}
+
+input ExitTokensERC721_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  withdrawer: Bytes
+  withdrawer_not: Bytes
+  withdrawer_in: [Bytes!]
+  withdrawer_not_in: [Bytes!]
+  withdrawer_contains: Bytes
+  withdrawer_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  log: Bytes
+  log_not: Bytes
+  log_in: [Bytes!]
+  log_not_in: [Bytes!]
+  log_contains: Bytes
+  log_not_contains: Bytes
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum ExitTokensERC721_orderBy {
+  id
+  transactionHash
+  withdrawer
+  rootToken
+  log
+  counter
+  timestamp
+  blockNumber
+}
+
+
+type LockEther {
+  id: ID!
+  transactionHash: String!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+  counter: BigInt!
+  depositor: Bytes!
+  depositReceiver: Bytes!
+  amount: BigInt!
+}
+
+type LockEtherCounter {
+  id: ID!
+  current: BigInt!
+}
+
+input LockEtherCounter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum LockEtherCounter_orderBy {
+  id
+  current
+}
+
+input LockEther_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  depositor: Bytes
+  depositor_not: Bytes
+  depositor_in: [Bytes!]
+  depositor_not_in: [Bytes!]
+  depositor_contains: Bytes
+  depositor_not_contains: Bytes
+  depositReceiver: Bytes
+  depositReceiver_not: Bytes
+  depositReceiver_in: [Bytes!]
+  depositReceiver_not_in: [Bytes!]
+  depositReceiver_contains: Bytes
+  depositReceiver_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+}
+
+enum LockEther_orderBy {
+  id
+  transactionHash
+  blockNumber
+  timestamp
+  counter
+  depositor
+  depositReceiver
+  amount
+}
+
+type LockTokensERC1155 {
+  id: ID!
+  transactionHash: String!
+  depositor: Bytes!
+  depositReceiver: Bytes!
+  rootToken: Bytes!
+  ids: [BigInt!]!
+  amounts: [BigInt!]!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type LockTokensERC1155Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input LockTokensERC1155Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum LockTokensERC1155Counter_orderBy {
+  id
+  current
+}
+
+input LockTokensERC1155_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  depositor: Bytes
+  depositor_not: Bytes
+  depositor_in: [Bytes!]
+  depositor_not_in: [Bytes!]
+  depositor_contains: Bytes
+  depositor_not_contains: Bytes
+  depositReceiver: Bytes
+  depositReceiver_not: Bytes
+  depositReceiver_in: [Bytes!]
+  depositReceiver_not_in: [Bytes!]
+  depositReceiver_contains: Bytes
+  depositReceiver_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  ids: [BigInt!]
+  ids_not: [BigInt!]
+  ids_contains: [BigInt!]
+  ids_not_contains: [BigInt!]
+  amounts: [BigInt!]
+  amounts_not: [BigInt!]
+  amounts_contains: [BigInt!]
+  amounts_not_contains: [BigInt!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum LockTokensERC1155_orderBy {
+  id
+  transactionHash
+  depositor
+  depositReceiver
+  rootToken
+  ids
+  amounts
+  counter
+  timestamp
+  blockNumber
+}
+
+type LockTokensERC20 {
+  id: ID!
+  transactionHash: String!
+  depositor: Bytes!
+  depositReceiver: Bytes!
+  rootToken: Bytes!
+  amount: BigInt!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type LockTokensERC20Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input LockTokensERC20Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum LockTokensERC20Counter_orderBy {
+  id
+  current
+}
+
+input LockTokensERC20_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  depositor: Bytes
+  depositor_not: Bytes
+  depositor_in: [Bytes!]
+  depositor_not_in: [Bytes!]
+  depositor_contains: Bytes
+  depositor_not_contains: Bytes
+  depositReceiver: Bytes
+  depositReceiver_not: Bytes
+  depositReceiver_in: [Bytes!]
+  depositReceiver_not_in: [Bytes!]
+  depositReceiver_contains: Bytes
+  depositReceiver_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum LockTokensERC20_orderBy {
+  id
+  transactionHash
+  depositor
+  depositReceiver
+  rootToken
+  amount
+  counter
+  timestamp
+  blockNumber
+}
+
+type LockTokensERC721 {
+  id: ID!
+  transactionHash: String!
+  depositor: Bytes!
+  depositReceiver: Bytes!
+  rootToken: Bytes!
+  tokenId: BigInt!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type LockTokensERC721Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input LockTokensERC721Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum LockTokensERC721Counter_orderBy {
+  id
+  current
+}
+
+input LockTokensERC721_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  depositor: Bytes
+  depositor_not: Bytes
+  depositor_in: [Bytes!]
+  depositor_not_in: [Bytes!]
+  depositor_contains: Bytes
+  depositor_not_contains: Bytes
+  depositReceiver: Bytes
+  depositReceiver_not: Bytes
+  depositReceiver_in: [Bytes!]
+  depositReceiver_not_in: [Bytes!]
+  depositReceiver_contains: Bytes
+  depositReceiver_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  tokenId: BigInt
+  tokenId_not: BigInt
+  tokenId_gt: BigInt
+  tokenId_lt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum LockTokensERC721_orderBy {
+  id
+  transactionHash
+  depositor
+  depositReceiver
+  rootToken
+  tokenId
+  counter
+  timestamp
+  blockNumber
+}
+
+type PlasmaDepositERC20Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input PlasmaDepositERC20Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum PlasmaDepositERC20Counter_orderBy {
+  id
+  current
+}
+
+type PlasmaDepositsERC20 {
+  id: ID!
+  transactionHash: String!
+  user: Bytes!
+  rootToken: Bytes!
+  amount: BigInt!
+  counter: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+input PlasmaDepositsERC20_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_not_contains: String
+  transactionHash_starts_with: String
+  transactionHash_not_starts_with: String
+  transactionHash_ends_with: String
+  transactionHash_not_ends_with: String
+  user: Bytes
+  user_not: Bytes
+  user_in: [Bytes!]
+  user_not_in: [Bytes!]
+  user_contains: Bytes
+  user_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum PlasmaDepositsERC20_orderBy {
+  id
+  transactionHash
+  user
+  rootToken
+  amount
+  counter
+  timestamp
+  blockNumber
+}
