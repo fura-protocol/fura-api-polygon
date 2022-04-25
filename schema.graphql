@@ -1722,6 +1722,138 @@ type Query {
     # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
     # subgraphError: _SubgraphErrorPolicy_! = deny
   ): [ExitTokensERC1155!]!
+  exitERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC20
+  exitERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC20_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC20!]!
+  exitERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC20Counter
+  exitERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC20Counter!]!
+  exitERC721(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC721
+  exitERC721S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC721_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC721_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC721!]!
+  exitERC721Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC721Counter
+  exitERC721Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC721Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC721Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC721Counter!]!
+  exitERC1155(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC1155
+  exitERC1155S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC1155_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC1155_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC1155!]!
+  exitERC1155Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC1155Counter
+  exitERC1155Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC1155Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC1155Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC1155Counter!]!
   lockEther(
     id: ID!
 
@@ -1948,7 +2080,7 @@ type Query {
     id: ID!
 
     # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
-    block: Block_height
+    #block: Block_height
 
     # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
     subgraphError: _SubgraphErrorPolicy_! = deny
@@ -1961,7 +2093,7 @@ type Query {
     where: TokenMappingCounter_filter
 
     # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
-    block: Block_height
+    #block: Block_height
 
     # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
     subgraphError: _SubgraphErrorPolicy_! = deny
@@ -2874,6 +3006,138 @@ type Subscription {
     # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
     # subgraphError: _SubgraphErrorPolicy_! = deny
   ): [ExitTokensERC1155!]!
+  exitERC20(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC20
+  exitERC20S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC20_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC20_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC20!]!
+  exitERC20Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC20Counter
+  exitERC20Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC20Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC20Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC20Counter!]!
+  exitERC721(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC721
+  exitERC721S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC721_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC721_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC721!]!
+  exitERC721Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC721Counter
+  exitERC721Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC721Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC721Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC721Counter!]!
+  exitERC1155(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC1155
+  exitERC1155S(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC1155_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC1155_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC1155!]!
+  exitERC1155Counter(
+    id: ID!
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): ExitERC1155Counter
+  exitERC1155Counters(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ExitERC1155Counter_orderBy
+    orderDirection: OrderDirection
+    where: ExitERC1155Counter_filter
+
+    # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
+    #block: Block_height
+
+    # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
+    subgraphError: _SubgraphErrorPolicy_! = deny
+  ): [ExitERC1155Counter!]!
   lockEther(
     id: ID!
 
@@ -3100,7 +3364,7 @@ type Subscription {
     id: ID!
 
     # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
-    block: Block_height
+    #block: Block_height
 
     # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
     subgraphError: _SubgraphErrorPolicy_! = deny
@@ -3113,7 +3377,7 @@ type Subscription {
     where: TokenMappingCounter_filter
 
     # The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted.
-    block: Block_height
+    #block: Block_height
 
     # Set to `allow` to receive data even if the subgraph has skipped over errors while syncing.
     subgraphError: _SubgraphErrorPolicy_! = deny
@@ -3125,6 +3389,7 @@ type Subscription {
 
 type TokenMapping {
   id: ID!
+  counter: BigInt!
   rootToken: Bytes!
   childToken: Bytes!
   tokenType: String!
@@ -3142,6 +3407,14 @@ input TokenMapping_filter {
   id_lte: ID
   id_in: [ID!]
   id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
   rootToken: Bytes
   rootToken_not: Bytes
   rootToken_in: [Bytes!]
@@ -4073,6 +4346,7 @@ type LockTokensERC1155 {
   counter: BigInt!
   timestamp: BigInt!
   blockNumber: BigInt!
+  mintable: Boolean!
 }
 
 type LockTokensERC1155Counter {
@@ -4177,6 +4451,10 @@ input LockTokensERC1155_filter {
   blockNumber_lte: BigInt
   blockNumber_in: [BigInt!]
   blockNumber_not_in: [BigInt!]
+  mintable: Boolean
+  mintable_not: Boolean
+  mintable_in: [Boolean!]
+  mintable_not_in: [Boolean!]
 }
 
 enum LockTokensERC1155_orderBy {
@@ -4190,6 +4468,7 @@ enum LockTokensERC1155_orderBy {
   counter
   timestamp
   blockNumber
+  mintable
 }
 
 type LockTokensERC20 {
@@ -4202,6 +4481,7 @@ type LockTokensERC20 {
   counter: BigInt!
   timestamp: BigInt!
   blockNumber: BigInt!
+  mintable: Boolean!
 }
 
 type LockTokensERC20Counter {
@@ -4306,6 +4586,10 @@ input LockTokensERC20_filter {
   blockNumber_lte: BigInt
   blockNumber_in: [BigInt!]
   blockNumber_not_in: [BigInt!]
+  mintable: Boolean
+  mintable_not: Boolean
+  mintable_in: [Boolean!]
+  mintable_not_in: [Boolean!]
 }
 
 enum LockTokensERC20_orderBy {
@@ -4318,6 +4602,7 @@ enum LockTokensERC20_orderBy {
   counter
   timestamp
   blockNumber
+  mintable
 }
 
 type LockTokensERC721 {
@@ -4330,6 +4615,7 @@ type LockTokensERC721 {
   counter: BigInt!
   timestamp: BigInt!
   blockNumber: BigInt!
+  mintable: Boolean!
 }
 
 type LockTokensERC721Counter {
@@ -4434,6 +4720,10 @@ input LockTokensERC721_filter {
   blockNumber_lte: BigInt
   blockNumber_in: [BigInt!]
   blockNumber_not_in: [BigInt!]
+  mintable: Boolean
+  mintable_not: Boolean
+  mintable_in: [Boolean!]
+  mintable_not_in: [Boolean!]
 }
 
 enum LockTokensERC721_orderBy {
@@ -4446,6 +4736,7 @@ enum LockTokensERC721_orderBy {
   counter
   timestamp
   blockNumber
+  mintable
 }
 
 type PlasmaDepositERC20Counter {
@@ -4564,6 +4855,436 @@ enum PlasmaDepositsERC20_orderBy {
   rootToken
   amount
   counter
+  timestamp
+  blockNumber
+}
+
+type ExitERC1155 {
+  id: ID!
+  counter: BigInt!
+  transactionHash: String!
+  withdrawer: Bytes!
+  rootToken: Bytes!
+  amount: BigInt
+  amounts: [BigInt!]
+  tokenId: BigInt
+  tokenIds: [BigInt!]
+  mintable: Boolean!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type ExitERC1155Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitERC1155Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitERC1155Counter_orderBy {
+  id
+  current
+}
+
+input ExitERC1155_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_contains_nocase: String
+  transactionHash_not_contains: String
+  transactionHash_not_contains_nocase: String
+  transactionHash_starts_with: String
+  transactionHash_starts_with_nocase: String
+  transactionHash_not_starts_with: String
+  transactionHash_not_starts_with_nocase: String
+  transactionHash_ends_with: String
+  transactionHash_ends_with_nocase: String
+  transactionHash_not_ends_with: String
+  transactionHash_not_ends_with_nocase: String
+  withdrawer: Bytes
+  withdrawer_not: Bytes
+  withdrawer_in: [Bytes!]
+  withdrawer_not_in: [Bytes!]
+  withdrawer_contains: Bytes
+  withdrawer_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  amounts: [BigInt!]
+  amounts_not: [BigInt!]
+  amounts_contains: [BigInt!]
+  amounts_contains_nocase: [BigInt!]
+  amounts_not_contains: [BigInt!]
+  amounts_not_contains_nocase: [BigInt!]
+  tokenId: BigInt
+  tokenId_not: BigInt
+  tokenId_gt: BigInt
+  tokenId_lt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  tokenIds: [BigInt!]
+  tokenIds_not: [BigInt!]
+  tokenIds_contains: [BigInt!]
+  tokenIds_contains_nocase: [BigInt!]
+  tokenIds_not_contains: [BigInt!]
+  tokenIds_not_contains_nocase: [BigInt!]
+  mintable: Boolean
+  mintable_not: Boolean
+  mintable_in: [Boolean!]
+  mintable_not_in: [Boolean!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum ExitERC1155_orderBy {
+  id
+  counter
+  transactionHash
+  withdrawer
+  rootToken
+  amount
+  amounts
+  tokenId
+  tokenIds
+  mintable
+  timestamp
+  blockNumber
+}
+
+type ExitERC20 {
+  id: ID!
+  counter: BigInt!
+  transactionHash: String!
+  withdrawer: Bytes!
+  rootToken: Bytes!
+  amount: BigInt!
+  mintable: Boolean!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type ExitERC20Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitERC20Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitERC20Counter_orderBy {
+  id
+  current
+}
+
+input ExitERC20_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_contains_nocase: String
+  transactionHash_not_contains: String
+  transactionHash_not_contains_nocase: String
+  transactionHash_starts_with: String
+  transactionHash_starts_with_nocase: String
+  transactionHash_not_starts_with: String
+  transactionHash_not_starts_with_nocase: String
+  transactionHash_ends_with: String
+  transactionHash_ends_with_nocase: String
+  transactionHash_not_ends_with: String
+  transactionHash_not_ends_with_nocase: String
+  withdrawer: Bytes
+  withdrawer_not: Bytes
+  withdrawer_in: [Bytes!]
+  withdrawer_not_in: [Bytes!]
+  withdrawer_contains: Bytes
+  withdrawer_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  mintable: Boolean
+  mintable_not: Boolean
+  mintable_in: [Boolean!]
+  mintable_not_in: [Boolean!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum ExitERC20_orderBy {
+  id
+  counter
+  transactionHash
+  withdrawer
+  rootToken
+  amount
+  mintable
+  timestamp
+  blockNumber
+}
+
+type ExitERC721 {
+  id: ID!
+  counter: BigInt!
+  transactionHash: String!
+  withdrawer: Bytes!
+  rootToken: Bytes!
+  tokenId: BigInt
+  tokenIds: [BigInt!]
+  mintable: Boolean!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+}
+
+type ExitERC721Counter {
+  id: ID!
+  current: BigInt!
+}
+
+input ExitERC721Counter_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  current: BigInt
+  current_not: BigInt
+  current_gt: BigInt
+  current_lt: BigInt
+  current_gte: BigInt
+  current_lte: BigInt
+  current_in: [BigInt!]
+  current_not_in: [BigInt!]
+}
+
+enum ExitERC721Counter_orderBy {
+  id
+  current
+}
+
+input ExitERC721_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  counter: BigInt
+  counter_not: BigInt
+  counter_gt: BigInt
+  counter_lt: BigInt
+  counter_gte: BigInt
+  counter_lte: BigInt
+  counter_in: [BigInt!]
+  counter_not_in: [BigInt!]
+  transactionHash: String
+  transactionHash_not: String
+  transactionHash_gt: String
+  transactionHash_lt: String
+  transactionHash_gte: String
+  transactionHash_lte: String
+  transactionHash_in: [String!]
+  transactionHash_not_in: [String!]
+  transactionHash_contains: String
+  transactionHash_contains_nocase: String
+  transactionHash_not_contains: String
+  transactionHash_not_contains_nocase: String
+  transactionHash_starts_with: String
+  transactionHash_starts_with_nocase: String
+  transactionHash_not_starts_with: String
+  transactionHash_not_starts_with_nocase: String
+  transactionHash_ends_with: String
+  transactionHash_ends_with_nocase: String
+  transactionHash_not_ends_with: String
+  transactionHash_not_ends_with_nocase: String
+  withdrawer: Bytes
+  withdrawer_not: Bytes
+  withdrawer_in: [Bytes!]
+  withdrawer_not_in: [Bytes!]
+  withdrawer_contains: Bytes
+  withdrawer_not_contains: Bytes
+  rootToken: Bytes
+  rootToken_not: Bytes
+  rootToken_in: [Bytes!]
+  rootToken_not_in: [Bytes!]
+  rootToken_contains: Bytes
+  rootToken_not_contains: Bytes
+  tokenId: BigInt
+  tokenId_not: BigInt
+  tokenId_gt: BigInt
+  tokenId_lt: BigInt
+  tokenId_gte: BigInt
+  tokenId_lte: BigInt
+  tokenId_in: [BigInt!]
+  tokenId_not_in: [BigInt!]
+  tokenIds: [BigInt!]
+  tokenIds_not: [BigInt!]
+  tokenIds_contains: [BigInt!]
+  tokenIds_contains_nocase: [BigInt!]
+  tokenIds_not_contains: [BigInt!]
+  tokenIds_not_contains_nocase: [BigInt!]
+  mintable: Boolean
+  mintable_not: Boolean
+  mintable_in: [Boolean!]
+  mintable_not_in: [Boolean!]
+  timestamp: BigInt
+  timestamp_not: BigInt
+  timestamp_gt: BigInt
+  timestamp_lt: BigInt
+  timestamp_gte: BigInt
+  timestamp_lte: BigInt
+  timestamp_in: [BigInt!]
+  timestamp_not_in: [BigInt!]
+  blockNumber: BigInt
+  blockNumber_not: BigInt
+  blockNumber_gt: BigInt
+  blockNumber_lt: BigInt
+  blockNumber_gte: BigInt
+  blockNumber_lte: BigInt
+  blockNumber_in: [BigInt!]
+  blockNumber_not_in: [BigInt!]
+}
+
+enum ExitERC721_orderBy {
+  id
+  counter
+  transactionHash
+  withdrawer
+  rootToken
+  tokenId
+  tokenIds
+  mintable
   timestamp
   blockNumber
 }
